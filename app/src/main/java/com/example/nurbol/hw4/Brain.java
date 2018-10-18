@@ -98,6 +98,8 @@ public class Brain {
 
             case 'A':
                 strGen = "";
+                isBracketsOpen = false;
+                isPointed = false;
                 break;
 
             case '.':
