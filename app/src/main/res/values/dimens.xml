@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main.zero">0dp</dimen>
+    <dimen name="button.sq.strokeWidth">1dp</dimen>
+
+    <dimen name="main.margin.small">8dp</dimen>
+    <dimen name="main.margin.big">8dp</dimen>
+
+    <dimen name="main.textSize.big">53sp</dimen>
+    <dimen name="main.margin.veryBig">32dp</dimen>
+    <dimen name="main.margin.enoughBig">24dp</dimen>
+
+</resources>

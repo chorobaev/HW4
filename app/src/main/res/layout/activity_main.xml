@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBlack"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/editTextDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/main.margin.enoughBig"
+            android:layout_marginLeft="@dimen/main.margin.enoughBig"
+            android:layout_marginBottom="@dimen/main.margin.small"
+            android:layout_above="@+id/llKeyBoard"
+            android:textSize="@dimen/main.textSize.big"
+            android:editable="false"
+            android:text="0"
+            android:backgroundTint="@color/colorBlack"
+            android:gravity="end"
+            android:textColor="@color/colorWhite"
+            tools:text="1234"/>
+
+    <LinearLayout
+        android:id="@+id/llKeyBoard"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            tools:transitionName="First"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btPlusMines"
+                android:text="+/-"
+                style="@style/simple_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/simple_button" />
+
+            <Button
+                android:id="@+id/btBrackets"
+                android:text="()"
+                style="@style/simple_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/simple_button" />
+
+            <Button
+                android:id="@+id/btDelete"
+                android:text="C"
+                style="@style/simple_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/simple_button" />
+
+            <Button
+                android:id="@+id/btDivide"
+                android:text="/"
+                style="@style/sign_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.big"
+                android:background="@drawable/sign_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            tools:tooltipText="Second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btOne"
+                android:text="1"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btTwo"
+                android:text="2"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btThree"
+                android:text="3"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btMultiply"
+                android:text="x"
+                style="@style/sign_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.big"
+                android:background="@drawable/sign_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/btFour"
+                android:text="4"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btFive"
+                android:text="5"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btSix"
+                android:text="6"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btSubtract"
+                android:text="-"
+                style="@style/sign_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/sign_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btSeven"
+                android:text="7"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btEight"
+                android:text="8"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btNine"
+                android:text="9"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button" />
+
+            <Button
+                android:id="@+id/btAdd"
+                android:text="+"
+                style="@style/sign_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/sign_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btZero"
+                style="@style/digit_button"
+                android:layout_width="140dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button"
+                android:text="0            " />
+
+            <Button
+                android:id="@+id/btPoint"
+                style="@style/digit_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/digit_button"
+                android:text="." />
+
+            <Button
+                android:id="@+id/btEqual"
+                style="@style/sign_button"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/main.margin.small"
+                android:background="@drawable/sign_button"
+                android:text="=" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

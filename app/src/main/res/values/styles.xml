@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/button.colorLightBlack</item>
+        <item name="colorPrimaryDark">@color/button.colorLightBlack</item>
+        <item name="colorAccent">@color/colorWhite</item>
+    </style>
+
+    <style name="simple_button">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="digit_button">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/button.sq.colorGray</item>
+    </style>
+
+    <style name="sign_button">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
+</resources>
