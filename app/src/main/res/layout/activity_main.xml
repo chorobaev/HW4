@@ -19,6 +19,7 @@
             android:layout_above="@+id/llKeyBoard"
             android:textSize="@dimen/main.textSize.big"
             android:editable="false"
+            android:text="0"
             android:backgroundTint="@color/colorBlack"
             android:gravity="end"
             android:textColor="@color/colorWhite"
