@@ -109,6 +109,7 @@ public class Brain {
 
     // Adds point.
     public String addPoint(){
+        Log.d("addPoint", isPointed + " - " + strGen);
         if (!isPointed) {
             if (strGen.length() != 0 && Character.isDigit(getLast(strGen))) {
                 isPointed = true;
@@ -154,14 +155,16 @@ public class Brain {
 
     // Deletes all zeros at the beginning of the number.
     private void checkIfBeginningZero(){
-        String stack = getLastNum(strGen);
-        Log.d("stack", strGen + "; Stack: " + stack);
+        String stack = strGen.length() != 0 ? getLastNum(strGen) : "";
+        Log.d("deleteZero", strGen + "; Stack: " + stack);
         int i;
         if (!(stack.length() > 2 && stack.charAt(1) == '.')) {
-            for (i = 0; stack.charAt(i) == '0' && i < stack.length(); i++) ;
-            strGen = lastNumDeleted(strGen) + stack.substring(i, stack.length());
+            for (i = 0; i < stack.length() && stack.charAt(i) == '0'; i++) ;
+            if (strGen.length() != 0) {
+                strGen = lastNumDeleted(strGen) + stack.substring(i, stack.length());
+            }
         }
-        Log.d("stack", "the end");
+        Log.d("deleteZero", "the end");
     }
 
     // Closes all brackets increasing the general value "openBrackets".
@@ -224,7 +227,7 @@ public class Brain {
 
     // Returns the last char of the given string. If the length of the string zero then returns '@'.
     private char getLast(String string){
-        if (string.equals("")) {
+        if (!string.equals("")) {
             return string.charAt(string.length() - 1);
         } else {
             return '@';
