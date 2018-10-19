@@ -6,7 +6,6 @@ import android.widget.EditText;
 
 public class MyOnClickListener implements View.OnClickListener, View.OnLongClickListener {
     private Brain mBrain;
-    private String strUi = "";
     private EditText etDisplay;
 
     public MyOnClickListener(EditText et) {
@@ -18,108 +17,79 @@ public class MyOnClickListener implements View.OnClickListener, View.OnLongClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btPlusMines:
-                strUi = mBrain.addSign('?');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.makeNOrP());
                 break;
 
             case R.id.btBrackets:
-                strUi = mBrain.addSign('B');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addBracket());
                 break;
 
             case R.id.btDelete:
-                strUi = mBrain.addSign('D');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.deleteLast());
                 break;
 
             case R.id.btPoint:
-                strUi = mBrain.addSign('.');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addPoint());
                 break;
 
             // Numbers
             case R.id.btOne:
-                strUi = mBrain.addSign('1');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('1'));
                 break;
 
             case R.id.btTwo:
-                strUi = mBrain.addSign('2');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('2'));
                 break;
 
             case R.id.btThree:
-                strUi = mBrain.addSign('3');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('3'));
                 break;
-
             case R.id.btFour:
-                strUi = mBrain.addSign('4');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('4'));
                 break;
-
             case R.id.btFive:
-                strUi = mBrain.addSign('5');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('5'));
                 break;
-
             case R.id.btSix:
-                strUi = mBrain.addSign('6');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('6'));
                 break;
-
             case R.id.btSeven:
-                strUi = mBrain.addSign('7');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('7'));
                 break;
-
             case R.id.btEight:
-                strUi = mBrain.addSign('8');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('8'));
                 break;
-
             case R.id.btNine:
-                strUi = mBrain.addSign('9');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addDigit('9'));
                 break;
 
             case R.id.btZero:
-                strUi = mBrain.addSign('0');
-                etDisplay.setText(strUi);
+                mBrain.addZero();
                 break;
 
             // Operations
             case R.id.btDivide:
-                strUi = mBrain.addSign('/');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addOperation('/'));
                 break;
-
             case R.id.btMultiply:
-                strUi = mBrain.addSign('x');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addOperation('x'));
                 break;
-
             case R.id.btSubtract:
-                strUi = mBrain.addSign('-');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addOperation('-'));
                 break;
-
             case R.id.btAdd:
-                strUi = mBrain.addSign('+');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.addOperation('+'));
                 break;
 
             case R.id.btEqual:
-                strUi = mBrain.addSign('=');
-                etDisplay.setText(strUi);
+                etDisplay.setText(mBrain.calculateAll());
                 break;
         }
     }
 
     @Override
     public boolean onLongClick(View v) {
-        strUi = mBrain.addSign('A');
-        etDisplay.setText(strUi);
+        etDisplay.setText(mBrain.deleteAll());
         return false;
     }
 }
