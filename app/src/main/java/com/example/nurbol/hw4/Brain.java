@@ -138,6 +138,7 @@ public class Brain {
                 strGen = String.valueOf((int) result);
             } else {
                 strGen = String.valueOf(roundTill4Pl(result));
+                isPointed = true;
             }
         }
         return strGen;
